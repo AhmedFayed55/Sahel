@@ -15,7 +15,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   Bloc.observer = MyBlocObserver();
-  runApp(const Saai());
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => AppLanguageProvider(),
+      child: const Saai(),
+    ),
+  );
 }
 
 class Saai extends StatelessWidget {
