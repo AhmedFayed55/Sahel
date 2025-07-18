@@ -15,11 +15,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   Bloc.observer = MyBlocObserver();
-  runApp(const Sahel());
+  runApp(const Saai());
 }
 
-class Sahel extends StatelessWidget {
-  const Sahel({super.key});
+class Saai extends StatelessWidget {
+  const Saai({super.key});
 
   @override
   Widget build(BuildContext context) {
