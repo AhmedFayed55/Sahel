@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sahel/core/components/custom_button.dart';
+import 'package:sahel/core/components/custom_password_field.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -10,11 +11,14 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
-            width: double.infinity,
-            height: 500.h,
+          SizedBox(width: double.infinity, height: 500.h),
+          CustomPasswordField(
+            hintText: 'Confirm Password',
+            controller: TextEditingController(),
+            filled: false, // toggle false to show outlined style
           ),
-          CustomButton(text: "Login", onTap: (){} ),
+
+          CustomButton(text: "Login", onTap: () {}),
         ],
       ),
     );
