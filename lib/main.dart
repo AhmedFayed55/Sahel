@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:sahel/config/theme/theme.dart';
 import 'package:sahel/features/auth/presentation/pages/forget_pass_screen.dart';
 import 'package:sahel/features/auth/presentation/pages/login_screen.dart';
 import 'package:sahel/features/auth/presentation/pages/register_screen.dart';
@@ -38,6 +39,7 @@ class Saai extends StatelessWidget {
         locale: Locale(languageProvider.appLanguage),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
+        theme: AppTheme.appTheme,
         debugShowCheckedModeBanner: false,
         routes: {
           AppRoutes.loginRoute: (_) => const LoginScreen(),
