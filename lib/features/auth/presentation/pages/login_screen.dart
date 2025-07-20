@@ -10,11 +10,11 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: 500.h,
           ),
-          CustomButton(text: "Login", onTap: (){} , isPrimary: false,),
+          CustomButton(text: "Login", onTap: (){} ),
         ],
       ),
     );
